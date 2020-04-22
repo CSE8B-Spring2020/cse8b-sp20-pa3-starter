@@ -46,6 +46,7 @@
  */
 public class LargeInteger {
 
+    // DO NOT UPDATE ANY OF THE INSTANCE VARIABLES BELOW!
     int sign; // -1 for negative, 0 for zero, +1 for positive numbers
     int[] magnitude; // array representation of digits
 
@@ -109,6 +110,7 @@ public class LargeInteger {
 
     /**
      * ToString method to print LargeInteger
+     * return A string representation of LargeInteger
      */
     @Override
     public String toString() {
@@ -149,11 +151,12 @@ public class LargeInteger {
     }
 
     /**
-     * compares this LargeInteger and otherNum LargeInteger
+     * Compares this LargeInteger and otherNum LargeInteger
      * and returns 1,0, or -1 depending on which number is larger
      *
      * @param otherNum The other LargeInteger to compare to
-     * @return 1 if this LargeInteger is larger, -1 if smaller, 0 if equal
+     * @return 1 if this LargeInteger is larger than other LargeInteger,
+     *         -1 if smaller, 0 if equal
      */
     public int compare(LargeInteger otherNum) {
         // TODO implement method

@@ -96,54 +96,6 @@ public class LargeIntegerTester {
     }
 
     @Test
-    public void testAdd() {
-
-        // Adding two positive numbers
-        LargeInteger num1 = new LargeInteger("50");
-        LargeInteger num2 = new LargeInteger("500");
-        LargeInteger expected1 = new LargeInteger("550");
-        LargeInteger actual1 = LargeInteger.add(num1, num2);
-        assertEquals(expected1.toString(), actual1.toString());
-
-        // Adding a positive and negative number
-        LargeInteger num3 = new LargeInteger("-500");
-        LargeInteger expected2 = new LargeInteger("0");
-        LargeInteger actual2 = LargeInteger.add(num2, num3);
-        assertEquals(expected2.toString(), actual2.toString());
-
-        // Adding two negative numbers
-        LargeInteger num4 = new LargeInteger("-40");
-        LargeInteger expected3 = new LargeInteger("-540");
-        LargeInteger actual3 = LargeInteger.add(num3, num4);
-        assertEquals(expected3.toString(), actual3.toString());
-
-    }
-
-    @Test
-    public void testSubtract() {
-
-        // Subtracting two positive numbers
-        LargeInteger num1 = new LargeInteger("50");
-        LargeInteger num2 = new LargeInteger("500");
-        LargeInteger expected1 = new LargeInteger("-450");
-        LargeInteger actual1 = LargeInteger.subtract(num1, num2);
-        assertEquals(expected1.toString(), actual1.toString());
-
-        // Subtracting a positive and negative number
-        LargeInteger num3 = new LargeInteger("-500");
-        LargeInteger expected2 = new LargeInteger("1000");
-        LargeInteger actual2 = LargeInteger.subtract(num2, num3);
-        assertEquals(expected2.toString(), actual2.toString());
-
-        // Subtracting two negative numbers
-        LargeInteger num4 = new LargeInteger("-40");
-        LargeInteger expected3 = new LargeInteger("-460");
-        LargeInteger actual3 = LargeInteger.subtract(num3, num4);
-        assertEquals(expected3.toString(), actual3.toString());
-
-    }
-
-    @Test
     public void testMultiply10() {
         // remove this line when you add test case(s).
         fail("No test cases.");
@@ -174,8 +126,51 @@ public class LargeIntegerTester {
     }
 
     @Test
-    public void testModulus() {
+    public void testAdd() {
+        // Adding two positive numbers
+        LargeInteger num1 = new LargeInteger("50");
+        LargeInteger num2 = new LargeInteger("500");
+        LargeInteger expected1 = new LargeInteger("550");
+        LargeInteger actual1 = LargeInteger.add(num1, num2);
+        assertEquals(expected1.toString(), actual1.toString());
 
+        // Adding a positive and negative number
+        LargeInteger num3 = new LargeInteger("-500");
+        LargeInteger expected2 = new LargeInteger("0");
+        LargeInteger actual2 = LargeInteger.add(num2, num3);
+        assertEquals(expected2.toString(), actual2.toString());
+
+        // Adding two negative numbers
+        LargeInteger num4 = new LargeInteger("-40");
+        LargeInteger expected3 = new LargeInteger("-540");
+        LargeInteger actual3 = LargeInteger.add(num3, num4);
+        assertEquals(expected3.toString(), actual3.toString());
+    }
+
+    @Test
+    public void testSubtract() {
+        // Subtracting two positive numbers
+        LargeInteger num1 = new LargeInteger("50");
+        LargeInteger num2 = new LargeInteger("500");
+        LargeInteger expected1 = new LargeInteger("-450");
+        LargeInteger actual1 = LargeInteger.subtract(num1, num2);
+        assertEquals(expected1.toString(), actual1.toString());
+
+        // Subtracting a positive and negative number
+        LargeInteger num3 = new LargeInteger("-500");
+        LargeInteger expected2 = new LargeInteger("1000");
+        LargeInteger actual2 = LargeInteger.subtract(num2, num3);
+        assertEquals(expected2.toString(), actual2.toString());
+
+        // Subtracting two negative numbers
+        LargeInteger num4 = new LargeInteger("-40");
+        LargeInteger expected3 = new LargeInteger("-460");
+        LargeInteger actual3 = LargeInteger.subtract(num3, num4);
+        assertEquals(expected3.toString(), actual3.toString());
+    }
+
+    @Test
+    public void testModulus() {
         LargeInteger num0 = new LargeInteger("50");
 
         // Testing a case when modulus is zero
@@ -203,6 +198,5 @@ public class LargeIntegerTester {
         LargeInteger expected4 = new LargeInteger("-7");
         LargeInteger actual4 = negNum0.modulus(negNum2);
         assertEquals(expected4.toString(), actual4.toString());
-
     }
 }
